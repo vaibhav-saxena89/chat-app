@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  namespace: chat-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      name: frontend-pod
+      labels: 
+        app: frontend
+    spec:
+      containers:
+      - name: chatapp-frontend
+        image: vaibhavsaxena89/full-stack_chatapp-frontend:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: NODE_ENV
+          value: production
+        - name: REACT_APP_BACKEND_URL
+          value: "http://backend.chat-app.svc.cluster.local:5001"
+        - name: PORT
+          value: "80"
