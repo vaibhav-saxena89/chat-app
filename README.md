@@ -216,8 +216,6 @@ This project is evolving, and here are a few exciting things on the horizon:
 ![Login](/frontend/public/login.png)
 
 
-
-## 📜 License
-
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
+BY-
+Vaibhav Saxena(202110101140014)
+Abhigyan (202210101140025)
